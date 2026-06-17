@@ -1,11 +1,9 @@
-#Lab 2
-#Task 1: Identify Entities and Attributes
-#Alter table
-#Task 2: Understand Database Relationships
-#Task 3: Understand Entity Relationship Model (ERD)
-#Task 4: Applying Normalization
-#Task 5: Create Banking Tables using DDL
-#1.Create Tables
+#Lab1
+CREATE DATABASE BankingDB;
+USE BankingDB;
+
+SHOW DATABASES;
+
 CREATE TABLE Customers (
     CustomerID INT PRIMARY KEY,
     FirstName VARCHAR(50),
@@ -14,12 +12,14 @@ CREATE TABLE Customers (
     Phone VARCHAR(15),
     AccountCreationDate DATE
 );
+
 CREATE TABLE Accounts (
     AccountID INT PRIMARY KEY,
     CustomerID INT,
     AccountType VARCHAR(20),
     Balance DECIMAL(10,2),
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID) );
+    
     
     CREATE TABLE Transactions (
     TransactionID INT PRIMARY KEY,
@@ -54,50 +54,18 @@ CREATE TABLE Loans (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
 
-#Task 6: Modify Table Structure using ALTER
-
-ALTER TABLE Customers
-ADD DateOfBirth DATE;
-
-ALTER TABLE Customers
-MODIFY Phone VARCHAR(20);
-
-ALTER TABLE Accounts
-ADD CONSTRAINT chk_MinBalance
-CHECK (Balance >= 1000);
-#Task 7: Delete Tables using DROP
-
-DROP TABLE AccountBranches;
-
-#Task 8: Apply Constraints for Banking Business Rules
-
-CREATE TABLE Customers (
-    CustomerID INT PRIMARY KEY,
-    FirstName VARCHAR(50),
-    LastName VARCHAR(50)
-);
-
-CREATE TABLE Accounts (
-    AccountID INT PRIMARY KEY,
-    CustomerID INT,
-
-    FOREIGN KEY (CustomerID)
-    REFERENCES Customers(CustomerID)
-);
-
-ALTER TABLE Customers
-MODIFY FirstName VARCHAR(50) NOT NULL;
-
-ALTER TABLE Customers
-ADD CONSTRAINT uq_Email UNIQUE (Email);
-
-
 Describe Customers;
 Describe Accounts;
-Describe Transactions;   
+Describe Transactions;
 Describe Branches;
 Describe AccountBranches;
 Describe Loans;
+
+
+
+
+
+
 
 
 
