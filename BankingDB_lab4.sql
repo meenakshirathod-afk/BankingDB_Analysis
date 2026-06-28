@@ -177,3 +177,29 @@ SELECT TransactionID,
        Amount,
        AVG(Amount) OVER () AS AverageTransaction
 FROM Transactions;
+
+
+
+
+
+use bankingdb;
+SELECT * FROM Customers;
+SELECT * FROM Accounts;
+SELECT * FROM Transactions;
+SELECT * FROM Transactions WHERE Amount>5000;
+select * from ipl_analysis_data;
+use sakila;
+use bankingdb;
+SELECT FirstName, LastName, Email, Phone
+FROM Customers;
+
+
+
+
+
+
+
+
+
+
+

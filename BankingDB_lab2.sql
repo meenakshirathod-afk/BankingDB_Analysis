@@ -90,7 +90,8 @@ MODIFY FirstName VARCHAR(50) NOT NULL;
 
 ALTER TABLE Customers
 ADD CONSTRAINT uq_Email UNIQUE (Email);
-
+ ALTER TABLE Customers MODIFY Phone VARCHAR(20);
+describe customers;
 
 Describe Customers;
 Describe Accounts;

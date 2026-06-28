@@ -34,7 +34,6 @@ VALUES
 (105, 'Rohit', 'Verma', 'rohit.verma@gmail.com', '9345678912', '2025-06-03', '1997-08-10'),
 (106, 'Neha', 'Singh', 'neha.singh@gmail.com', '9456789123', '2025-06-04', '2001-02-18'),
 (107, 'Karan', 'Mehta', 'karan.mehta@gmail.com', '9567891234', '2025-06-05', '1996-06-30');
-
 #Accounts
 INSERT INTO Accounts
 (AccountID, CustomerID, AccountType, Balance)
@@ -115,13 +114,22 @@ SELECT * FROM Transactions;
 
 DELETE FROM Accounts
 WHERE AccountID = 202;   #It will generate foreign key constraint failed error 1451 for that run : 
-
+select * from Accounts;
 DELETE FROM Transactions
 WHERE AccountID = 202;
 DELETE FROM AccountBranches
 WHERE AccountID = 202;
 
+
+Select * from Transactions;
 DELETE FROM Accounts
 WHERE AccountID = 202;
-
+use bankingdb;
+select * from Customers;
 SELECT * FROM Accounts;
+Select * from AccountBranches;
+use sakila;
+drop table customer;
+use bankingdb;
+ describe customers;
+select * from emp_info;

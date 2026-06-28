@@ -61,7 +61,8 @@ Describe Branches;
 Describe AccountBranches;
 Describe Loans;
 
-
+use sakila;
+drop table customers;
 
 
 
